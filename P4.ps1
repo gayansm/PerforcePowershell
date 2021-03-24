@@ -15,12 +15,12 @@ function ConnectToPerforce{
 # Any existing workspace can be used as a template.
 function CreateWorkspaceBasedOnTemplateWorkspace{
    param(
-	     [string]$templateWorkspace #eg.gayansm_AU12354_6975_template_test
-       [string]$newWorkspace #eg.gayansm_AU98765_new_ws
+	[string]$templateWorkspace #eg.gayansm_AU12354_6975_template_test
+        [string]$newWorkspace #eg.gayansm_AU98765_new_ws
    )
    p4 client -t $templateWorkspace -o $newWorkspace | p4 client -i
 }
 
 function GetLatest{
-  p4 sync
+   p4 sync
 }
